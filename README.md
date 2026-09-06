@@ -69,8 +69,8 @@
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Dulina2002&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&rank_icon=github" alt="Dulina's GitHub statistics" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dulina2002&layout=compact&theme=github_dark&hide_border=true&langs_count=8" alt="Dulina's most used languages" />
+<img width="49%" src="./assets/github-stats.svg" alt="Dulina's GitHub statistics" />
+<img width="49%" src="./assets/top-langs.svg" alt="Dulina's most used languages" />
 
 </div>
 
