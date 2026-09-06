@@ -140,50 +140,101 @@
 
 ---
 
+---
+
 ## 🚀 Featured Projects
 
 <table>
 <tr>
-<td width="33%" valign="top">
 
-### ⚖️ LexAI
-AI-powered legal assistance platform focused on clear and accessible digital legal experiences.
+<td width="50%" valign="top">
 
-**Stack:** React • Vite • Tailwind CSS • Clerk • AI/RAG
+### 🤖 [AI Interview App](https://github.com/Dulina2002/AI_INTERVIEW_APP)
 
-![Status](https://img.shields.io/badge/Repository-Publishing%20Soon-0e75b6?style=flat-square)
+An AI-focused interview application project designed to explore intelligent and interactive software experiences.
 
-</td>
-<td width="33%" valign="top">
+**Primary Language:** JavaScript
 
-### 🏨 LuxeVista Resort
-Mobile resort experience covering accommodation, bookings, services and guest interactions.
-
-**Stack:** Android • Java • XML • Material UI
-
-![Status](https://img.shields.io/badge/Repository-Publishing%20Soon-0e75b6?style=flat-square)
+<a href="https://github.com/Dulina2002/AI_INTERVIEW_APP">
+  <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
 
 </td>
-<td width="33%" valign="top">
 
-### 🛒 Gadget Hub
-Service-oriented application for distributor quotation comparison, ordering and product workflows.
+<td width="50%" valign="top">
 
-**Stack:** ASP.NET Core • REST APIs • SQL Server • JavaScript
+### 🍽️ [Restaurant Queue App](https://github.com/Dulina2002/restaurant_queue_app)
 
-![Status](https://img.shields.io/badge/Repository-Publishing%20Soon-0e75b6?style=flat-square)
+A Flutter mobile application project focused on restaurant queue management and mobile user interaction.
+
+**Primary Language:** Dart
+
+<a href="https://github.com/Dulina2002/restaurant_queue_app">
+  <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
 
 </td>
+
+</tr>
+
+<tr>
+
+<td width="50%" valign="top">
+
+### 📊 [GitHub Analyzer](https://github.com/Dulina2002/github_analyzer)
+
+A software project focused on analysing and working with GitHub-related information and development data.
+
+**Primary Language:** JavaScript
+
+<a href="https://github.com/Dulina2002/github_analyzer">
+  <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+</td>
+
+<td width="50%" valign="top">
+
+### 📚 [Smart Study Circle](https://github.com/Dulina2002/Smart_Study_Circle)
+
+A collaborative software project designed around smart study, learning and group-based academic interactions.
+
+<a href="https://github.com/Dulina2002/Smart_Study_Circle">
+  <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2" valign="top">
+
+### 🏫 [Smart Campus Group Project](https://github.com/Dulina2002/it3030-paf-2026-smart-campus-group156)
+
+A collaborative smart-campus development project created as part of a group software engineering workflow.
+
+**Primary Language:** JavaScript
+
+<a href="https://github.com/Dulina2002/it3030-paf-2026-smart-campus-group156">
+  <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+</td>
+
 </tr>
 </table>
 
 <div align="center">
 
 <a href="https://github.com/Dulina2002?tab=repositories">
-  <img src="https://img.shields.io/badge/View%20All%20Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="View repositories" />
+  <img src="https://img.shields.io/badge/View%20All%20Repositories-0D1117?style=for-the-badge&logo=github&logoColor=white" alt="View all repositories" />
 </a>
 
 </div>
+
+---
 
 <!--
 WHEN YOUR PROJECT REPOSITORIES ARE PUBLIC:
