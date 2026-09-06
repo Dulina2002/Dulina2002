@@ -74,13 +74,11 @@
 
 </div>
 
-> GitHub analytics shown by public hosted cards are based primarily on public GitHub activity. Private-repository statistics can require a self-hosted card with your own GitHub token.
-
 ### ⚡ Auto-Updating Repository Metrics
 
 <div align="center">
 
-<img src="./assets/profile-metrics.svg" alt="Auto-updating GitHub repository metrics" />
+<img src="./assets/profile-metrics.svg" alt="Dulina's GitHub profile metrics" />
 
 </div>
 
