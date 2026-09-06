@@ -95,12 +95,11 @@
 </div>
 
 ---
-
 ## 📈 Contribution Activity Graph
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Dulina2002&theme=github-compact&hide_border=true&area=true&custom_title=Dulina%27s%20Contribution%20Activity" alt="GitHub contribution activity graph" />
+<img src="./assets/activity-graph.svg" alt="Dulina's Contribution Activity Graph" />
 
 </div>
 
