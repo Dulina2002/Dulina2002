@@ -82,7 +82,7 @@
 
 </div>
 
-This card is generated inside this repository by GitHub Actions and automatically refreshes every **6 hours**.
+
 
 ---
 
