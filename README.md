@@ -34,16 +34,31 @@
 
 ## 👨‍💻 About Me
 
-```text
+<table>
+<tr>
+
+<td width="62%" valign="middle">
+
+<pre>
 💻 Building      Full-Stack Web, Mobile & Software Applications
 🤖 Exploring     AI-powered products and intelligent systems
 🧠 Learning      Advanced Software Engineering & Data Science concepts
 🤝 Open to       Full-Stack, Mobile, AI & Software collaborations
 💬 Ask me about  React, Java, Python, SQL, APIs & Application Development
 ⚡ Mindset        Build practical solutions. Learn continuously. Improve every release.
-```
+</pre>
 
----
+</td>
+
+<td width="38%" align="center" valign="middle">
+
+<img src="./assets/about-coding.gif" width="320" alt="Developer coding animation" />
+
+</td>
+
+</tr>
+</table>
+-------
 
 ## 🧰 Tech Stack
 
