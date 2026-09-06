@@ -214,7 +214,242 @@ jobs:
           )
 
           PY
+      # -------------------------------------------------------
+      # Contribution Activity Graph
+      # -------------------------------------------------------
+      - name: Generate contribution activity graph
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: |
+          python3 <<'PY'
+          import json
+          import os
+          import urllib.request
+          from datetime import date, timedelta
+          from pathlib import Path
 
+          username = os.environ["GH_USER"]
+          token = os.environ["GH_TOKEN"]
+
+          query = """
+          query($login: String!) {
+            user(login: $login) {
+              contributionsCollection {
+                contributionCalendar {
+                  weeks {
+                    contributionDays {
+                      date
+                      contributionCount
+                    }
+                  }
+                }
+              }
+            }
+          }
+          """
+
+          payload = json.dumps({
+              "query": query,
+              "variables": {"login": username}
+          }).encode()
+
+          request = urllib.request.Request(
+              "https://api.github.com/graphql",
+              data=payload,
+              headers={
+                  "Authorization": f"Bearer {token}",
+                  "Content-Type": "application/json",
+                  "User-Agent": f"{username}-profile"
+              }
+          )
+
+          with urllib.request.urlopen(request, timeout=30) as response:
+              result = json.load(response)
+
+          weeks = result["data"]["user"]["contributionsCollection"][
+              "contributionCalendar"
+          ]["weeks"]
+
+          contributions = {}
+
+          for week in weeks:
+              for day in week["contributionDays"]:
+                  contributions[day["date"]] = day["contributionCount"]
+
+          today = date.today()
+
+          days = [
+              today - timedelta(days=i)
+              for i in range(30, -1, -1)
+          ]
+
+          values = [
+              contributions.get(day.isoformat(), 0)
+              for day in days
+          ]
+
+          width = 900
+          height = 300
+
+          left = 55
+          right = 25
+          top = 55
+          bottom = 45
+
+          graph_width = width - left - right
+          graph_height = height - top - bottom
+
+          max_value = max(values) if max(values) > 0 else 1
+
+          points = []
+
+          for i, value in enumerate(values):
+
+              x = left + (
+                  i / (len(values) - 1)
+              ) * graph_width
+
+              y = (
+                  top +
+                  graph_height -
+                  (value / max_value) * graph_height
+              )
+
+              points.append((x, y))
+
+          polyline = " ".join(
+              f"{x:.1f},{y:.1f}"
+              for x, y in points
+          )
+
+          circles = ""
+
+          for (x, y), value in zip(points, values):
+
+              circles += f"""
+              <circle
+                  cx="{x:.1f}"
+                  cy="{y:.1f}"
+                  r="3"
+                  fill="#58a6ff"
+              >
+                <title>{value} contributions</title>
+              </circle>
+              """
+
+          grid = ""
+
+          for i in range(5):
+
+              y = top + (graph_height / 4) * i
+
+              grid += f"""
+              <line
+                  x1="{left}"
+                  y1="{y:.1f}"
+                  x2="{width-right}"
+                  y2="{y:.1f}"
+                  stroke="#21262d"
+                  stroke-width="1"
+              />
+              """
+
+          start_label = days[0].strftime("%d %b")
+          end_label = days[-1].strftime("%d %b")
+
+          total = sum(values)
+
+          svg = f"""
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="{width}"
+              height="{height}"
+              viewBox="0 0 {width} {height}"
+              role="img"
+              aria-label="GitHub contribution activity graph"
+          >
+
+            <rect
+                width="100%"
+                height="100%"
+                rx="14"
+                fill="#0d1117"
+                stroke="#30363d"
+            />
+
+            <text
+                x="{left}"
+                y="30"
+                fill="#f0f6fc"
+                font-size="17"
+                font-family="Arial, Helvetica, sans-serif"
+                font-weight="700"
+            >
+                Contribution Activity — Last 31 Days
+            </text>
+
+            <text
+                x="{width-right}"
+                y="30"
+                text-anchor="end"
+                fill="#8b949e"
+                font-size="12"
+                font-family="Arial, Helvetica, sans-serif"
+            >
+                {total} contributions
+            </text>
+
+            {grid}
+
+            <polyline
+                points="{polyline}"
+                fill="none"
+                stroke="#58a6ff"
+                stroke-width="3"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+            />
+
+            {circles}
+
+            <text
+                x="{left}"
+                y="{height-15}"
+                fill="#8b949e"
+                font-size="11"
+                font-family="Arial, Helvetica, sans-serif"
+            >
+                {start_label}
+            </text>
+
+            <text
+                x="{width-right}"
+                y="{height-15}"
+                text-anchor="end"
+                fill="#8b949e"
+                font-size="11"
+                font-family="Arial, Helvetica, sans-serif"
+            >
+                {end_label}
+            </text>
+
+          </svg>
+          """
+
+          output = Path("assets/activity-graph.svg")
+
+          output.write_text(
+              svg,
+              encoding="utf-8"
+          )
+
+          print(
+              f"Generated activity graph with "
+              f"{total} contributions."
+          )
+
+          PY
       # -------------------------------------------------------
       # Save generated files
       # -------------------------------------------------------
