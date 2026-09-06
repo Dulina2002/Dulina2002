@@ -4,11 +4,6 @@ on:
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "assets/profile-metrics.svg"
 
 permissions:
   contents: write
@@ -18,114 +13,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout profile repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5 
+      - name: Generate GitHub stats card
+        uses: stats-organization/github-readme-stats-action@v2
         with:
-          python-version: "3.12"
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&theme=github_dark&hide_border=true
+          path: assets/github-stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate GitHub metrics SVG
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_USER: ${{ github.repository_owner }}
-        run: |
-          python <<'PY'
-          import json
-          import os
-          import urllib.request
-          from pathlib import Path
-          from xml.sax.saxutils import escape
+      - name: Generate top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&theme=github_dark&hide_border=true
+          path: assets/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-          username = os.environ["GH_USER"]
-          token = os.environ.get("GH_TOKEN", "")
-
-          headers = {
-              "Accept": "application/vnd.github+json",
-              "User-Agent": f"{username}-profile-metrics",
-          }
-          if token:
-              headers["Authorization"] = f"Bearer {token}"
-
-          def get_json(url):
-              req = urllib.request.Request(url, headers=headers)
-              with urllib.request.urlopen(req, timeout=30) as response:
-                  return json.load(response)
-
-          user = get_json(f"https://api.github.com/users/{username}")
-
-          repos = []
-          page = 1
-          while True:
-              batch = get_json(
-                  f"https://api.github.com/users/{username}/repos"
-                  f"?type=owner&sort=updated&per_page=100&page={page}"
-              )
-              repos.extend(batch)
-              if len(batch) < 100:
-                  break
-              page += 1
-
-          public_repos = int(user.get("public_repos", len(repos)))
-          followers = int(user.get("followers", 0))
-          total_stars = sum(int(repo.get("stargazers_count", 0)) for repo in repos if not repo.get("fork"))
-          total_forks = sum(int(repo.get("forks_count", 0)) for repo in repos if not repo.get("fork"))
-
-          values = [
-              ("PUBLIC REPOS", str(public_repos)),
-              ("STARS EARNED", str(total_stars)),
-              ("FOLLOWERS", str(followers)),
-              ("PUBLIC FORKS", str(total_forks)),
-          ]
-
-          card_width = 210
-          gap = 12
-          padding = 16
-          height = 112
-          width = padding * 2 + card_width * 4 + gap * 3
-
-          cards = []
-          for i, (label, value) in enumerate(values):
-              x = padding + i * (card_width + gap)
-              cards.append(f"""
-                <g transform="translate({x},16)">
-                  <rect width="{card_width}" height="80" rx="12"
-                        fill="#0d1117" stroke="#30363d"/>
-                  <text x="16" y="31" fill="#8b949e"
-                        font-size="12" font-family="Arial, Helvetica, sans-serif"
-                        font-weight="700">{escape(label)}</text>
-                  <text x="16" y="61" fill="#58a6ff"
-                        font-size="25" font-family="Arial, Helvetica, sans-serif"
-                        font-weight="700">{escape(value)}</text>
-                </g>
-              """)
-
-          svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
-                  width="{width}" height="{height}" viewBox="0 0 {width} {height}"
-                  role="img" aria-label="GitHub profile repository metrics">
-            <rect width="100%" height="100%" rx="14" fill="#010409"/>
-            {''.join(cards)}
-          </svg>
-          """
-
-          out = Path("assets/profile-metrics.svg")
-          out.parent.mkdir(parents=True, exist_ok=True)
-          out.write_text(svg, encoding="utf-8")
-          print(
-              f"Generated metrics: repos={public_repos}, stars={total_stars}, "
-              f"followers={followers}, forks={total_forks}"
-          )
-          PY
-
-      - name: Commit updated metrics
+      - name: Commit updated cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/profile-metrics.svg
+
+          git add assets/github-stats.svg assets/top-langs.svg
+
           if git diff --cached --quiet; then
-            echo "No metric changes."
+            echo "No changes."
           else
-            git commit -m "chore: update profile metrics"
+            git commit -m "chore: update GitHub analytics"
             git push
           fi
