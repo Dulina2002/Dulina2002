@@ -1,37 +1,214 @@
-<h1 align="center">Hi 👋, I'm Dulina Fonseka</h1>
-<h3 align="center">Full Stack Developer building scalable, efficient, and interactive web solutions</h3>
+<!--
+  Professional GitHub Profile README for @Dulina2002
+  Keep this file in the repository: Dulina2002/Dulina2002
+-->
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=dulina2002&label=Profile%20views&color=0e75b6&style=flat" alt="dulina2002" /> </p>
+<div align="center">
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=dulina2002" alt="dulina2002" /></a> </p>
+# Hi 👋, I'm Dulina Fonseka
 
-- 🔭 I’m currently focused on **Building expertise in Full-Stack Development, Mobile Application Development, AI & Software Engineering**
+### Full-Stack • Mobile • AI • Software Development
 
-- 🌱 I’m currently learning **Advanced IT concepts, Software Engineering, Data Science & Physical Sciences**
+<a href="https://git.io/typing-svg">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=2F81F7&center=true&vCenter=true&width=760&lines=Building+scalable+and+interactive+software;Full-Stack+Web+%7C+Mobile+%7C+AI;React+%7C+Java+%7C+Python+%7C+SQL;Always+learning.+Always+building."
+    alt="Typing SVG"
+  />
+</a>
 
-- 👯 I’m looking to collaborate on **Full-Stack Web, Mobile Application, AI & Software Development Projects**
+<br/>
 
-- 🤝 I’m open to collaborating on **Web, Mobile & Software Development Projects**
+<a href="https://github.com/Dulina2002">
+  <img src="https://komarev.com/ghpvc/?username=Dulina2002&label=PROFILE+VIEWS&color=0e75b6&style=for-the-badge" alt="Profile views" />
+</a>
+<a href="https://github.com/Dulina2002?tab=followers">
+  <img src="https://img.shields.io/github/followers/Dulina2002?style=for-the-badge&logo=github&label=Followers&color=0e75b6" alt="GitHub followers" />
+</a>
+<a href="https://github.com/Dulina2002?tab=repositories">
+  <img src="https://img.shields.io/github/stars/Dulina2002?affiliations=OWNER&style=for-the-badge&logo=github&label=Stars%20Earned&color=0e75b6" alt="GitHub stars earned" />
+</a>
 
-- 💬 Ask me about **Full-Stack Web Development, Mobile App Development, AI, Software Engineering, Python, Java, SQL & React**
+</div>
 
-- 📫 How to reach me **dulinafonseka11@gmail.com**
+---
 
-- ⚡ Fun fact **I enjoy designing practical digital solutions and exploring emerging technologies**
+## 👨‍💻 About Me
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/linkedin.com/in/dulina-fonseka" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="linkedin.com/in/dulina-fonseka" height="30" width="40" /></a>
-<a href="https://instagram.com/dulina_nadith_fonseka" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="dulina_nadith_fonseka" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/@dulinafonseka8930" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="@dulinafonseka8930" height="30" width="40" /></a>
-</p>
+```text
+💻 Building      Full-Stack Web, Mobile & Software Applications
+🤖 Exploring     AI-powered products and intelligent systems
+🧠 Learning      Advanced Software Engineering & Data Science concepts
+🤝 Open to       Full-Stack, Mobile, AI & Software collaborations
+💬 Ask me about  React, Java, Python, SQL, APIs & Application Development
+⚡ Mindset        Build practical solutions. Learn continuously. Improve every release.
+```
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nestjs.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-plain.svg" alt="nestjs" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://reactnative.dev/" target="_blank" rel="noreferrer"> <img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> <a href="https://vuejs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/> </a> </p>
+---
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=dulina2002&show_icons=true&locale=en&layout=compact" alt="dulina2002" /></p>
+## 🧰 Tech Stack
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=dulina2002&show_icons=true&locale=en" alt="dulina2002" /></p>
+<div align="center">
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=dulina2002&" alt="dulina2002" /></p>
+### Languages
 
+<img src="https://skillicons.dev/icons?i=js,ts,python,java,c,cpp,cs,php&theme=dark&perline=8" alt="Programming languages" />
+
+### Frontend & Mobile
+
+<img src="https://skillicons.dev/icons?i=react,vue,html,css,tailwind,bootstrap,flutter,androidstudio&theme=dark&perline=8" alt="Frontend and mobile technologies" />
+
+### Backend, Databases & Tools
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,spring,mongodb,mysql,firebase,git,postman,figma&theme=dark&perline=9" alt="Backend databases and tools" />
+
+</div>
+
+---
+
+## 📊 GitHub Analytics
+
+<div align="center">
+
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Dulina2002&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&rank_icon=github" alt="Dulina's GitHub statistics" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dulina2002&layout=compact&theme=github_dark&hide_border=true&langs_count=8" alt="Dulina's most used languages" />
+
+</div>
+
+> GitHub analytics shown by public hosted cards are based primarily on public GitHub activity. Private-repository statistics can require a self-hosted card with your own GitHub token.
+
+### ⚡ Auto-Updating Repository Metrics
+
+<div align="center">
+
+<img src="./assets/profile-metrics.svg" alt="Auto-updating GitHub repository metrics" />
+
+</div>
+
+This card is generated inside this repository by GitHub Actions and automatically refreshes every **6 hours**.
+
+---
+
+## 🔥 Contribution Streak
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=Dulina2002&theme=github-dark-blue&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub contribution streak" />
+
+</div>
+
+---
+
+## 📈 Contribution Activity Graph
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Dulina2002&theme=github-compact&hide_border=true&area=true&custom_title=Dulina%27s%20Contribution%20Activity" alt="GitHub contribution activity graph" />
+
+</div>
+
+---
+
+## 🧭 Commit & Contribution Timeline
+
+<div align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Dulina2002&theme=github_dark" alt="GitHub profile contribution timeline" />
+
+</div>
+
+---
+
+## 🐍 Contribution Commit Graph
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dulina2002/Dulina2002/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Dulina2002/Dulina2002/output/github-contribution-grid-snake.svg" />
+  <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/Dulina2002/Dulina2002/output/github-contribution-grid-snake.svg" />
+</picture>
+
+---
+
+## 🚀 Featured Projects
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### ⚖️ LexAI
+AI-powered legal assistance platform focused on clear and accessible digital legal experiences.
+
+**Stack:** React • Vite • Tailwind CSS • Clerk • AI/RAG
+
+![Status](https://img.shields.io/badge/Repository-Publishing%20Soon-0e75b6?style=flat-square)
+
+</td>
+<td width="33%" valign="top">
+
+### 🏨 LuxeVista Resort
+Mobile resort experience covering accommodation, bookings, services and guest interactions.
+
+**Stack:** Android • Java • XML • Material UI
+
+![Status](https://img.shields.io/badge/Repository-Publishing%20Soon-0e75b6?style=flat-square)
+
+</td>
+<td width="33%" valign="top">
+
+### 🛒 Gadget Hub
+Service-oriented application for distributor quotation comparison, ordering and product workflows.
+
+**Stack:** ASP.NET Core • REST APIs • SQL Server • JavaScript
+
+![Status](https://img.shields.io/badge/Repository-Publishing%20Soon-0e75b6?style=flat-square)
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+<a href="https://github.com/Dulina2002?tab=repositories">
+  <img src="https://img.shields.io/badge/View%20All%20Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="View repositories" />
+</a>
+
+</div>
+
+<!--
+WHEN YOUR PROJECT REPOSITORIES ARE PUBLIC:
+Replace the project title with a real repository link, for example:
+
+### [⚖️ LexAI](https://github.com/Dulina2002/YOUR-REAL-REPOSITORY-NAME)
+
+Do not add a repository URL until that repository actually exists.
+-->
+
+---
+
+## 🤝 Connect With Me
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/dulina-fonseka/">
+  <img src="https://img.shields.io/badge/LinkedIn-Dulina%20Fonseka-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+<a href="mailto:dulinafonseka11@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-dulinafonseka11%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</a>
+<a href="https://www.instagram.com/dulina_nadith_fonseka/">
+  <img src="https://img.shields.io/badge/Instagram-dulina__nadith__fonseka-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+</a>
+<a href="https://www.youtube.com/@dulinafonseka8930">
+  <img src="https://img.shields.io/badge/YouTube-Dulina%20Fonseka-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
+</a>
+
+</div>
+
+---
+
+<div align="center">
+
+### 💡 Build • Learn • Improve • Repeat
+
+<sub>Thanks for visiting my GitHub profile.</sub>
+
+</div>
