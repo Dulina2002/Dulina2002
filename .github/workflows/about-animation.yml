@@ -1,0 +1,232 @@
+name: Generate About Animation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Generate coding animation
+        run: |
+          python <<'PY'
+          from PIL import Image, ImageDraw, ImageFont
+          from pathlib import Path
+
+          output = Path("assets/about-coding.gif")
+          output.parent.mkdir(parents=True, exist_ok=True)
+
+          WIDTH = 360
+          HEIGHT = 240
+          FRAMES = 36
+
+          def get_font(size):
+              paths = [
+                  "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
+                  "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+              ]
+
+              for path in paths:
+                  try:
+                      return ImageFont.truetype(path, size)
+                  except:
+                      pass
+
+              return ImageFont.load_default()
+
+          small_font = get_font(12)
+          medium_font = get_font(14)
+          title_font = get_font(13)
+
+          lines = [
+              ("$ build --profile dulina", (88, 166, 255)),
+              ("✓ full-stack web", (126, 231, 135)),
+              ("✓ mobile apps", (126, 231, 135)),
+              ("✓ ai + software", (126, 231, 135)),
+              ("$ learning --always", (88, 166, 255)),
+          ]
+
+          frames = []
+
+          for frame_number in range(FRAMES):
+
+              image = Image.new(
+                  "RGB",
+                  (WIDTH, HEIGHT),
+                  (13, 17, 23)
+              )
+
+              draw = ImageDraw.Draw(image)
+
+              x0, y0 = 24, 22
+              x1, y1 = 336, 218
+
+              draw.rounded_rectangle(
+                  (x0, y0, x1, y1),
+                  radius=16,
+                  fill=(22, 27, 34),
+                  outline=(48, 54, 61),
+                  width=2
+              )
+
+              draw.rounded_rectangle(
+                  (x0, y0, x1, y0 + 34),
+                  radius=16,
+                  fill=(27, 32, 40)
+              )
+
+              draw.rectangle(
+                  (x0, y0 + 17, x1, y0 + 34),
+                  fill=(27, 32, 40)
+              )
+
+              colors = [
+                  (255, 95, 86),
+                  (255, 189, 46),
+                  (39, 201, 63)
+              ]
+
+              for j, color in enumerate(colors):
+                  cx = x0 + 18 + j * 18
+
+                  draw.ellipse(
+                      (
+                          cx - 5,
+                          y0 + 7,
+                          cx + 5,
+                          y0 + 17
+                      ),
+                      fill=color
+                  )
+
+              draw.text(
+                  (x0 + 92, y0 + 8),
+                  "developer@github",
+                  font=title_font,
+                  fill=(205, 214, 224)
+              )
+
+              base_y = y0 + 50
+              line_height = 26
+
+              progress = (
+                  frame_number / (FRAMES - 1)
+              ) * (len(lines) + 0.6)
+
+              for index, (text, color) in enumerate(lines):
+
+                  reveal = max(
+                      0.0,
+                      min(1.0, progress - index)
+                  )
+
+                  characters = int(
+                      len(text) * reveal
+                  )
+
+                  shown = text[:characters]
+
+                  draw.text(
+                      (
+                          x0 + 18,
+                          base_y + index * line_height
+                      ),
+                      shown,
+                      font=medium_font,
+                      fill=color
+                  )
+
+                  if (
+                      0 < reveal < 1
+                      and (frame_number // 3) % 2 == 0
+                  ):
+
+                      bbox = draw.textbbox(
+                          (0, 0),
+                          shown,
+                          font=medium_font
+                      )
+
+                      cursor_x = (
+                          x0 + 18 +
+                          bbox[2] - bbox[0] +
+                          2
+                      )
+
+                      cursor_y = (
+                          base_y +
+                          index * line_height +
+                          2
+                      )
+
+                      draw.rectangle(
+                          (
+                              cursor_x,
+                              cursor_y,
+                              cursor_x + 6,
+                              cursor_y + 15
+                          ),
+                          fill=(230, 237, 243)
+                      )
+
+              draw.line(
+                  (
+                      x0 + 18,
+                      y1 - 24,
+                      x1 - 18,
+                      y1 - 24
+                  ),
+                  fill=(48, 54, 61),
+                  width=1
+              )
+
+              draw.text(
+                  (x0 + 18, y1 - 19),
+                  "BUILD • LEARN • SHIP",
+                  font=small_font,
+                  fill=(139, 148, 158)
+              )
+
+              frames.append(image)
+
+          frames[0].save(
+              output,
+              save_all=True,
+              append_images=frames[1:],
+              duration=90,
+              loop=0,
+              optimize=True
+          )
+
+          print("Created:", output)
+
+          PY
+
+      - name: Commit animation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/about-coding.gif
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Add About Me coding animation"
+            git push
+          fi
