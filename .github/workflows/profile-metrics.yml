@@ -450,7 +450,7 @@ jobs:
           )
 
           PY
-      # -------------------------------------------------------
+            # -------------------------------------------------------
       # Save generated files
       # -------------------------------------------------------
       - name: Commit updated analytics
@@ -461,6 +461,7 @@ jobs:
           git add assets/github-stats.svg
           git add assets/top-langs.svg
           git add assets/profile-metrics.svg
+          git add assets/activity-graph.svg
 
           if git diff --cached --quiet; then
             echo "No analytics changes."
