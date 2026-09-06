@@ -1,0 +1,197 @@
+cat > generate_about_animation.py <<'PY'
+from PIL import Image, ImageDraw, ImageFont
+from pathlib import Path
+
+output = Path("assets/about-coding.gif")
+output.parent.mkdir(parents=True, exist_ok=True)
+
+WIDTH = 360
+HEIGHT = 240
+FRAMES = 36
+
+def get_font(size, bold=False):
+    paths = [
+        "/System/Library/Fonts/Menlo.ttc",
+        "/System/Library/Fonts/Monaco.ttf",
+        "/System/Library/Fonts/Supplemental/Arial.ttf",
+    ]
+
+    for path in paths:
+        try:
+            return ImageFont.truetype(path, size)
+        except:
+            pass
+
+    return ImageFont.load_default()
+
+
+small_font = get_font(12)
+medium_font = get_font(14)
+title_font = get_font(13)
+
+lines = [
+    ("$ build --profile dulina", (88, 166, 255)),
+    ("✓ full-stack web", (126, 231, 135)),
+    ("✓ mobile apps", (126, 231, 135)),
+    ("✓ ai + software", (126, 231, 135)),
+    ("$ learning --always", (88, 166, 255)),
+]
+
+frames = []
+
+for frame_number in range(FRAMES):
+
+    image = Image.new(
+        "RGB",
+        (WIDTH, HEIGHT),
+        (13, 17, 23)
+    )
+
+    draw = ImageDraw.Draw(image)
+
+    x0 = 24
+    y0 = 22
+    x1 = 336
+    y1 = 218
+
+    # Main terminal
+    draw.rounded_rectangle(
+        (x0, y0, x1, y1),
+        radius=16,
+        fill=(22, 27, 34),
+        outline=(48, 54, 61),
+        width=2
+    )
+
+    # Terminal header
+    draw.rounded_rectangle(
+        (x0, y0, x1, y0 + 34),
+        radius=16,
+        fill=(27, 32, 40)
+    )
+
+    draw.rectangle(
+        (x0, y0 + 17, x1, y0 + 34),
+        fill=(27, 32, 40)
+    )
+
+    # Mac style buttons
+    colors = [
+        (255, 95, 86),
+        (255, 189, 46),
+        (39, 201, 63)
+    ]
+
+    for j, color in enumerate(colors):
+
+        cx = x0 + 18 + j * 18
+
+        draw.ellipse(
+            (cx - 5, y0 + 7, cx + 5, y0 + 17),
+            fill=color
+        )
+
+    draw.text(
+        (x0 + 92, y0 + 8),
+        "developer@github",
+        font=title_font,
+        fill=(205, 214, 224)
+    )
+
+    base_y = y0 + 50
+    line_height = 26
+
+    progress = (
+        frame_number / (FRAMES - 1)
+    ) * (len(lines) + 0.6)
+
+    for index, (text, color) in enumerate(lines):
+
+        reveal = max(
+            0.0,
+            min(1.0, progress - index)
+        )
+
+        characters = int(
+            len(text) * reveal
+        )
+
+        shown = text[:characters]
+
+        draw.text(
+            (
+                x0 + 18,
+                base_y + index * line_height
+            ),
+            shown,
+            font=medium_font,
+            fill=color
+        )
+
+        # Blinking cursor
+        if (
+            0 < reveal < 1
+            and (frame_number // 3) % 2 == 0
+        ):
+
+            box = draw.textbbox(
+                (0, 0),
+                shown,
+                font=medium_font
+            )
+
+            cursor_x = (
+                x0 + 18 +
+                (box[2] - box[0]) +
+                2
+            )
+
+            cursor_y = (
+                base_y +
+                index * line_height +
+                2
+            )
+
+            draw.rectangle(
+                (
+                    cursor_x,
+                    cursor_y,
+                    cursor_x + 6,
+                    cursor_y + 15
+                ),
+                fill=(230, 237, 243)
+            )
+
+    # Bottom divider
+    draw.line(
+        (
+            x0 + 18,
+            y1 - 24,
+            x1 - 18,
+            y1 - 24
+        ),
+        fill=(48, 54, 61),
+        width=1
+    )
+
+    draw.text(
+        (x0 + 18, y1 - 19),
+        "BUILD • LEARN • SHIP",
+        font=small_font,
+        fill=(139, 148, 158)
+    )
+
+    frames.append(image)
+
+
+frames[0].save(
+    output,
+    save_all=True,
+    append_images=frames[1:],
+    duration=90,
+    loop=0,
+    optimize=True
+)
+
+print(f"Created: {output}")
+PY
