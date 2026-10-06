@@ -35,7 +35,7 @@
       font-size="12"
       font-family="Arial, Helvetica, sans-serif"
   >
-      71 contributions
+      70 contributions
   </text>
 
   
@@ -86,7 +86,7 @@
     
 
   <polyline
-      points="55.0,248.8 82.3,55.0 109.7,255.0 137.0,255.0 164.3,248.8 191.7,255.0 219.0,255.0 246.3,255.0 273.7,255.0 301.0,255.0 328.3,248.8 355.7,255.0 383.0,255.0 410.3,255.0 437.7,205.0 465.0,255.0 492.3,255.0 519.7,248.8 547.0,255.0 574.3,255.0 601.7,230.0 629.0,255.0 656.3,255.0 683.7,255.0 711.0,248.8 738.3,217.5 765.7,242.5 793.0,255.0 820.3,205.0 847.7,236.2 875.0,236.2"
+      points="55.0,55.0 82.3,255.0 109.7,255.0 137.0,248.8 164.3,255.0 191.7,255.0 219.0,255.0 246.3,255.0 273.7,255.0 301.0,248.8 328.3,255.0 355.7,255.0 383.0,255.0 410.3,205.0 437.7,255.0 465.0,255.0 492.3,248.8 519.7,255.0 547.0,255.0 574.3,230.0 601.7,255.0 629.0,255.0 656.3,255.0 683.7,248.8 711.0,217.5 738.3,242.5 765.7,255.0 793.0,205.0 820.3,236.2 847.7,236.2 875.0,255.0"
       fill="none"
       stroke="#58a6ff"
       stroke-width="3"
@@ -97,20 +97,20 @@
   
     <circle
         cx="55.0"
-        cy="248.8"
-        r="3"
-        fill="#58a6ff"
-    >
-      <title>1 contributions</title>
-    </circle>
-    
-    <circle
-        cx="82.3"
         cy="55.0"
         r="3"
         fill="#58a6ff"
     >
       <title>32 contributions</title>
+    </circle>
+    
+    <circle
+        cx="82.3"
+        cy="255.0"
+        r="3"
+        fill="#58a6ff"
+    >
+      <title>0 contributions</title>
     </circle>
     
     <circle
@@ -124,20 +124,20 @@
     
     <circle
         cx="137.0"
-        cy="255.0"
-        r="3"
-        fill="#58a6ff"
-    >
-      <title>0 contributions</title>
-    </circle>
-    
-    <circle
-        cx="164.3"
         cy="248.8"
         r="3"
         fill="#58a6ff"
     >
       <title>1 contributions</title>
+    </circle>
+    
+    <circle
+        cx="164.3"
+        cy="255.0"
+        r="3"
+        fill="#58a6ff"
+    >
+      <title>0 contributions</title>
     </circle>
     
     <circle
@@ -178,20 +178,20 @@
     
     <circle
         cx="301.0"
-        cy="255.0"
-        r="3"
-        fill="#58a6ff"
-    >
-      <title>0 contributions</title>
-    </circle>
-    
-    <circle
-        cx="328.3"
         cy="248.8"
         r="3"
         fill="#58a6ff"
     >
       <title>1 contributions</title>
+    </circle>
+    
+    <circle
+        cx="328.3"
+        cy="255.0"
+        r="3"
+        fill="#58a6ff"
+    >
+      <title>0 contributions</title>
     </circle>
     
     <circle
@@ -214,20 +214,20 @@
     
     <circle
         cx="410.3"
-        cy="255.0"
-        r="3"
-        fill="#58a6ff"
-    >
-      <title>0 contributions</title>
-    </circle>
-    
-    <circle
-        cx="437.7"
         cy="205.0"
         r="3"
         fill="#58a6ff"
     >
       <title>8 contributions</title>
+    </circle>
+    
+    <circle
+        cx="437.7"
+        cy="255.0"
+        r="3"
+        fill="#58a6ff"
+    >
+      <title>0 contributions</title>
     </circle>
     
     <circle
@@ -241,20 +241,20 @@
     
     <circle
         cx="492.3"
-        cy="255.0"
-        r="3"
-        fill="#58a6ff"
-    >
-      <title>0 contributions</title>
-    </circle>
-    
-    <circle
-        cx="519.7"
         cy="248.8"
         r="3"
         fill="#58a6ff"
     >
       <title>1 contributions</title>
+    </circle>
+    
+    <circle
+        cx="519.7"
+        cy="255.0"
+        r="3"
+        fill="#58a6ff"
+    >
+      <title>0 contributions</title>
     </circle>
     
     <circle
@@ -268,20 +268,20 @@
     
     <circle
         cx="574.3"
-        cy="255.0"
-        r="3"
-        fill="#58a6ff"
-    >
-      <title>0 contributions</title>
-    </circle>
-    
-    <circle
-        cx="601.7"
         cy="230.0"
         r="3"
         fill="#58a6ff"
     >
       <title>4 contributions</title>
+    </circle>
+    
+    <circle
+        cx="601.7"
+        cy="255.0"
+        r="3"
+        fill="#58a6ff"
+    >
+      <title>0 contributions</title>
     </circle>
     
     <circle
@@ -304,15 +304,6 @@
     
     <circle
         cx="683.7"
-        cy="255.0"
-        r="3"
-        fill="#58a6ff"
-    >
-      <title>0 contributions</title>
-    </circle>
-    
-    <circle
-        cx="711.0"
         cy="248.8"
         r="3"
         fill="#58a6ff"
@@ -321,7 +312,7 @@
     </circle>
     
     <circle
-        cx="738.3"
+        cx="711.0"
         cy="217.5"
         r="3"
         fill="#58a6ff"
@@ -330,7 +321,7 @@
     </circle>
     
     <circle
-        cx="765.7"
+        cx="738.3"
         cy="242.5"
         r="3"
         fill="#58a6ff"
@@ -339,7 +330,7 @@
     </circle>
     
     <circle
-        cx="793.0"
+        cx="765.7"
         cy="255.0"
         r="3"
         fill="#58a6ff"
@@ -348,12 +339,21 @@
     </circle>
     
     <circle
-        cx="820.3"
+        cx="793.0"
         cy="205.0"
         r="3"
         fill="#58a6ff"
     >
       <title>8 contributions</title>
+    </circle>
+    
+    <circle
+        cx="820.3"
+        cy="236.2"
+        r="3"
+        fill="#58a6ff"
+    >
+      <title>3 contributions</title>
     </circle>
     
     <circle
@@ -367,11 +367,11 @@
     
     <circle
         cx="875.0"
-        cy="236.2"
+        cy="255.0"
         r="3"
         fill="#58a6ff"
     >
-      <title>3 contributions</title>
+      <title>0 contributions</title>
     </circle>
     
 
@@ -382,7 +382,7 @@
       font-size="11"
       font-family="Arial, Helvetica, sans-serif"
   >
-      05 Sep
+      06 Sep
   </text>
 
   <text
@@ -393,7 +393,7 @@
       font-size="11"
       font-family="Arial, Helvetica, sans-serif"
   >
-      05 Oct
+      06 Oct
   </text>
 
 </svg>
